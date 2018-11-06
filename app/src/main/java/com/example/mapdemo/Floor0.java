@@ -292,7 +292,8 @@ public class Floor0 extends AppCompatActivity
                             .add(marker.getPosition(),markers[6]));
 
                 mLastPolyline.setStartCap(new CustomCap(
-                                BitmapDescriptorFactory.fromResource(R.drawable.arrow), 10));
+                                BitmapDescriptorFactory.fromResource(R.drawable.arrow), 15));
+                marker.setVisible(false);
                 return false;
             }
 
