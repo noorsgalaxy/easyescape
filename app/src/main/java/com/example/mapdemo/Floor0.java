@@ -37,6 +37,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CustomCap;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
@@ -290,7 +291,8 @@ public class Floor0 extends AppCompatActivity
                             .width(7)
                             .add(marker.getPosition(),markers[6]));
 
-
+                mLastPolyline.setStartCap(new CustomCap(
+                                BitmapDescriptorFactory.fromResource(R.drawable.arrow), 10));
                 return false;
             }
 
