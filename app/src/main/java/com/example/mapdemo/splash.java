@@ -13,7 +13,7 @@ public class splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         Handler handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override
