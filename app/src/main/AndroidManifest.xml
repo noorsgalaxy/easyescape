@@ -48,7 +48,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA0jGFYtLlpTzTr3XXeQHn0Ph3iWGXdkU0" />
+            android:value="your_api_key_here" />
 
         <activity android:name=".splash" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
