@@ -69,6 +69,8 @@
     <string name="floor5_description">Floor 5 EasyEscape</string>
     <string name="floorg">Floor -1</string>
     <string name="floorg_description">Floor -1 EasyEscape</string>
+    <string name="aboutMe">About Me</string>
+    <string name="aboutMeDescription">About NITK CSE EasyEScape</string>
     <string name="go_to_bondi">Go to Bondi</string>
     <string name="go_to_santorini">Go to Santorini</string>
     <string name="go_to_sydney">Go to Sydney</string>

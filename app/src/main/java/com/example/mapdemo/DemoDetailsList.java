@@ -47,6 +47,9 @@ public final class DemoDetailsList {
             new DemoDetails(R.string.floor5,
                     R.string.floor5_description,
                     Floor5.class),
+            new DemoDetails(R.string.aboutMe,
+                    R.string.aboutMeDescription,
+                    AboutMe.class),
 
             /*new DemoDetails(R.string.basic_map_demo_label,
                     R.string.basic_map_demo_description,

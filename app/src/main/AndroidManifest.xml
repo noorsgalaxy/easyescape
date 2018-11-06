@@ -50,7 +50,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA0jGFYtLlpTzTr3XXeQHn0Ph3iWGXdkU0" />
 
-        <activity android:name=".splash">
+        <activity android:name=".splash" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -189,7 +189,7 @@
         <activity
             android:name=".VisibleRegionDemoActivity"
             android:label="@string/visible_region_demo_label" />
-
+        <activity android:name=".AboutMe"></activity>
     </application>
 
 </manifest>
