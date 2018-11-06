@@ -10,7 +10,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="NITK CSE EASY ESCAPE"
-       android:textSize="32dp"
+       android:textSize="24dp"
        android:textColor="@color/black"/>
    <TextView
        android:id="@+id/app_dec1"
@@ -18,7 +18,7 @@
        android:layout_height="wrap_content"
        android:layout_below="@id/app_name"
        android:text="This app will guide you to the nearest exit in case of emergency."
-       android:textSize="24dp"
+       android:textSize="20dp"
        android:textColor="@color/black"/>
    <TextView
        android:id="@+id/app_dec2"
@@ -26,7 +26,7 @@
        android:layout_height="wrap_content"
        android:layout_below="@id/app_dec1"
        android:text="1) You need to select floors on which you currently present."
-       android:textSize="24dp"
+       android:textSize="20dp"
        android:textColor="@color/black"/>
    <TextView
        android:id="@+id/app_dec3"
@@ -34,7 +34,7 @@
        android:layout_height="wrap_content"
        android:layout_below="@id/app_dec2"
        android:text="2) Then choose the locationn nearest to you."
-       android:textSize="24dp"
+       android:textSize="20dp"
        android:textColor="@color/black"/>
    <TextView
        android:id="@+id/app_dec4"
@@ -42,35 +42,17 @@
        android:layout_height="wrap_content"
        android:layout_below="@id/app_dec3"
        android:text="3) The app will automatically direct you to the nearest exit."
-       android:textSize="24dp"
+       android:textSize="20dp"
        android:textColor="@color/black"/>
 
-   <TextView
-       android:id="@+id/githubLink"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentLeft="true"
-       android:layout_alignParentBottom="true"
-       android:layout_gravity="center"
-       android:layout_marginStart="119dp"
-       android:layout_marginLeft="119dp"
-       android:layout_marginBottom="76dp"
-       android:autoLink="web"
-       android:gravity="center"
-       android:padding="20px"
-       android:text="@string/githubLink"
-       android:textAppearance="?android:attr/textAppearanceSmall"
-       android:textSize="24dp"
-       android:textColor="@color/black"/>
+
 
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="match_parent"
-       android:layout_below="@id/githubLink"
-       android:text="Creators: Anvisha Srivastava & Noorul Hasan"
-       android:textSize="20dp"
-       android:gravity="center"
+       android:text="Creators: Anvisha Srivastava and Noorul Hasan"
+       android:textSize="16dp"
+       android:gravity="bottom"
        android:textColor="@color/black"/>
 
 </RelativeLayout>
