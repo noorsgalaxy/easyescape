@@ -37,6 +37,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CustomCap;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
@@ -265,7 +266,6 @@ public class Floor1 extends AppCompatActivity
 
             Marker marker = mMap.addMarker(new MarkerOptions()
                     .position(markers[i])
-                    .title("Marker " + i)
                     .anchor(0.5f,0.5f)
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.square_logo)));
             marker.setTag(i);
@@ -273,17 +273,29 @@ public class Floor1 extends AppCompatActivity
         }
     }
             private Polyline mLastPolyline = null;
+            private Marker mLastMarker = null;
             public boolean onMarkerClick(final Marker marker) {
                 int i = (Integer) marker.getTag();
                 int endNode = 7;
                 if(i>=0 && i<=5)
                     endNode = 2;
-                if(mLastPolyline != null)
+                if(mLastPolyline != null) {
+                    mLastMarker.setVisible(true);
                     mLastPolyline.remove();
+                    mLastPolyline = null;
+                }
+                mLastMarker = marker;
+                if(i != 2 || i != 7)
                 mLastPolyline = mMap.addPolyline(new PolylineOptions()
                         .color(Color.RED)
                         .width(7)
                         .add(marker.getPosition(),markers[endNode]));
+                if(mLastPolyline != null) {
+                    mLastPolyline.setStartCap(new CustomCap(
+                            BitmapDescriptorFactory.fromResource(R.drawable.arrow), 15));
+                    marker.setVisible(false);
+
+                }
                 return false;
             }
 
