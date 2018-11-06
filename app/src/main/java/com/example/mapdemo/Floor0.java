@@ -263,7 +263,6 @@ public class Floor0 extends AppCompatActivity
 
             Marker marker = mMap.addMarker(new MarkerOptions()
                     .position(markers[i])
-                    .title("Marker " + i)
                     .anchor(0.5f,0.5f)
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.square_logo)));
             marker.setTag(i);
@@ -271,11 +270,17 @@ public class Floor0 extends AppCompatActivity
         }
     }
             private Polyline mLastPolyline = null;
+            private Marker mLastMarker = null;
             public boolean onMarkerClick(final Marker marker) {
+
                 int i = (Integer) marker.getTag();
-                if(mLastPolyline != null)
+                if(mLastPolyline != null) {
+                    mLastMarker.setVisible(true);
                     mLastPolyline.remove();
-                if(i==0 || i==1 || i==3 || i==4)
+                    mLastPolyline = null;
+                }
+                mLastMarker = marker;
+                if(i==0 || i==3 || i==4)
                     mLastPolyline = mMap.addPolyline(new PolylineOptions()
                             .color(Color.RED)
                             .width(7)
@@ -285,15 +290,18 @@ public class Floor0 extends AppCompatActivity
                             .color(Color.RED)
                             .width(7)
                             .add(marker.getPosition(),markers[3],markers[1]));
-                if(i==5 || i==6 || i==7 || i==8)
+                if(i==5 || i==7 || i==8)
                     mLastPolyline = mMap.addPolyline(new PolylineOptions()
                             .color(Color.RED)
                             .width(7)
                             .add(marker.getPosition(),markers[6]));
+                if(mLastPolyline != null) {
+                    mLastPolyline.setStartCap(new CustomCap(
+                            BitmapDescriptorFactory.fromResource(R.drawable.arrow), 15));
+                    marker.setVisible(false);
 
-                mLastPolyline.setStartCap(new CustomCap(
-                                BitmapDescriptorFactory.fromResource(R.drawable.arrow), 15));
-                marker.setVisible(false);
+                }
+
                 return false;
             }
 
