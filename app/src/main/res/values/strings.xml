@@ -16,6 +16,7 @@
 <resources>
     <string name="demo_title">NITK CSE EasyEscape</string>
     <string name="no_demos">No demos</string>
+    <string name="githubLink"> <a href="https://github.com/noorsgalaxy/easyescape">Project Link</a></string>
     <string name="play_services_not_installed">Google Play services is not installed on this device.</string>
 
     <string name="alpha">Alpha</string>

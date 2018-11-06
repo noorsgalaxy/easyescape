@@ -59,7 +59,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/floor0" />
+            android:label="@string/demo_title" />
         <activity
             android:name=".Floor0"
             android:label="@string/floor0" />
