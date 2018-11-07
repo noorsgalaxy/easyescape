@@ -48,7 +48,10 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="your_api_key_here" />
+            android:value="enter your google api key here" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".splash" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -58,7 +61,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:label="@string/demo_title" />
         <activity
             android:name=".Floor0"

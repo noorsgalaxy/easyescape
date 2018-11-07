@@ -17,6 +17,7 @@
 package com.example.mapdemo;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
@@ -295,6 +296,12 @@ public class Floor1 extends AppCompatActivity
                             BitmapDescriptorFactory.fromResource(R.drawable.arrow), 15));
                     marker.setVisible(false);
 
+                }
+                if(i==2 || i==7)
+                {
+                    Intent intent=new Intent(Floor1.this,Floor0.class);
+                    finish();
+                    startActivity(intent);
                 }
                 return false;
             }

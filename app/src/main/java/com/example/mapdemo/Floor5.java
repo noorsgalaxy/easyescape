@@ -17,6 +17,7 @@
 package com.example.mapdemo;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
@@ -290,12 +291,20 @@ public class Floor5 extends AppCompatActivity
                         .color(Color.RED)
                         .width(7)
                         .add(marker.getPosition(),markers[endNode]));
+
                 if(mLastPolyline != null) {
                     mLastPolyline.setStartCap(new CustomCap(
                             BitmapDescriptorFactory.fromResource(R.drawable.arrow), 15));
                     marker.setVisible(false);
 
                 }
+                if(i==2 || i==7)
+                {
+                    Intent intent=new Intent(Floor5.this,Floor3.class);
+                    finish();
+                    startActivity(intent);
+                }
+
                 return false;
             }
 

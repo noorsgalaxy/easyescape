@@ -5,54 +5,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutMe">
-   <TextView
-       android:id="@+id/app_name"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="NITK CSE EASY ESCAPE"
-       android:textSize="24dp"
-       android:textColor="@color/black"/>
-   <TextView
-       android:id="@+id/app_dec1"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_below="@id/app_name"
-       android:text="This app will guide you to the nearest exit in case of emergency."
-       android:textSize="20dp"
-       android:textColor="@color/black"/>
-   <TextView
-       android:id="@+id/app_dec2"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_below="@id/app_dec1"
-       android:text="1) You need to select floors on which you currently present."
-       android:textSize="20dp"
-       android:textColor="@color/black"/>
-   <TextView
-       android:id="@+id/app_dec3"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_below="@id/app_dec2"
-       android:text="2) Then choose the locationn nearest to you."
-       android:textSize="20dp"
-       android:textColor="@color/black"/>
-   <TextView
-       android:id="@+id/app_dec4"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_below="@id/app_dec3"
-       android:text="3) The app will automatically direct you to the nearest exit."
-       android:textSize="20dp"
-       android:textColor="@color/black"/>
 
+    <TextView
+        android:id="@+id/app_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="NITK CSE"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:fontFamily="@font/aladin" />
+    <TextView
+        android:id="@+id/app_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/app_name1"
+        android:text="EASY ESCAPE"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:fontFamily="@font/aladin" />
 
+    <ImageView
+        android:id="@+id/logo_id"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/app_name2"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/nitklogo" />
 
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent"
-       android:text="Creators: Anvisha Srivastava and Noorul Hasan"
-       android:textSize="16dp"
-       android:gravity="bottom"
-       android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/app_dec1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_id"
+        android:text="This app will guide you to the nearest exit in case of emergency."
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        tools:fontFamily="@font/dancing_script" />
+
+    <TextView
+        android:id="@+id/app_dec2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_dec1"
+        android:text="1) You need to select floors on which you currently present."
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:fontFamily="@font/dancing_script" />
+
+    <TextView
+        android:id="@+id/app_dec3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_dec2"
+        android:text="2) Then choose the location nearest to you."
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:fontFamily="@font/dancing_script" />
+
+    <TextView
+        android:id="@+id/app_dec4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_dec3"
+        android:text="3) The app will automatically direct you to the nearest exit."
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:fontFamily="@font/dancing_script" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_dec4"
+        android:gravity="bottom"
+        android:text="Creators: Anvisha Srivastava and Noorul Hasan"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:fontFamily="@font/allura" />
 
 </RelativeLayout>
